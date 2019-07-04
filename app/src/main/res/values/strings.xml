@@ -7,6 +7,6 @@
     <string name="cart">Cart</string>
     <string name="shop">Shop</string>
     <string name="about_us">about us</string>
-    <string name="about_des">This is some random text about us.</string>
+    <string name="about_des">This is some random text for about us.</string>
     <string name="products">No of Products: 0</string>
 </resources>

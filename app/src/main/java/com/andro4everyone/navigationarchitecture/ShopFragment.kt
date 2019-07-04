@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_shop.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -45,18 +47,17 @@ class ShopFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_shop, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btnAboutId.setOnClickListener {
+        Navigation.findNavController(it).navigate(R.id.aboutDestinationId)
+        }
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
     }
 
     override fun onDetach() {
