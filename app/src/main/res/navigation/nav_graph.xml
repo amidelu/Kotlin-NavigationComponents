@@ -15,7 +15,15 @@
         android:id="@+id/shopDestinationId"
         android:name="com.andro4everyone.navigationarchitecture.ShopFragment"
         android:label="Shop"
-        tools:layout="@layout/fragment_shop" />
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/nextAction"
+            app:destination="@id/aboutDestinationId" />
+        <argument
+            android:name="productCount"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
     <fragment
         android:id="@+id/aboutDestinationId"
         android:name="com.andro4everyone.navigationarchitecture.AboutFragment"
